@@ -13,7 +13,7 @@ add_executable(${TEST_PROJECT_NAME}
 	# add test files here
 )
 
-target_link_libraries(${TEST_PROJECT_NAME} ${CONAN_LIBS} CONAN_PKG::catch2)
+target_link_libraries(${TEST_PROJECT_NAME} ${CONAN_LIBS} CONAN_PKG::catch2 CONAN_PKG::eigen)
 target_include_directories(${TEST_PROJECT_NAME} PUBLIC ${CONAN_INCLUDE_DIRS} "${CMAKE_CURRENT_LIST_DIR}/../include")
 
 add_test(NAME ${UNIT_TEST_NAME}
